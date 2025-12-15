@@ -9,7 +9,10 @@
     <title>BOOTIN - Shop</title>
 </head>
 <body class="relative min-h-screen">
+    <!-- Checkbox du menu burger -->
     <input type="checkbox" id="menuBurger" class="peer" hidden>
+
+    <!-- debut du header -->
     <header class="fixed py-4 sm:h-32 shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-50 bg-white w-full h-fit">
         <section class="container mx-auto px-4">
             <ul class="flex justify-between items-center">
@@ -41,6 +44,8 @@
             </ul>
         </nav>
     </header>
+
+    <!-- sidebar -->
     <nav class="bg-white fixed opacity-0 z-50 transition-all duration-100 peer-checked:opacity-100 pointer-events-none peer-checked:pointer-events-auto w-full h-fit mt-16 sm:hidden">
         <ul class="flex flex-col justify-center items-center gap-4">
             <li><a href="../index.html" class="hover:text-red-400 transition-all duration-100 hover:underline hover:underline-offset-1">Home</a></li>
@@ -49,8 +54,224 @@
             <li><a href="./contact.html" class="hover:text-red-400 transition-all duration-100 hover:underline hover:underline-offset-1">Contact</a></li>
         </ul>
     </nav>
-    <main></main>
-    <footer class="w-full absolute bottom-0 left-0 right-0 bg-white">
+
+    <!-- debut du main -->
+    <main>
+        <!-- Hero section -->
+        <section class="grid grid-cols-1 items-center justify-center text-center pt-16 sm:pt-28 min-h-62">
+            <div class="col-start-1 row-start-1 col-span-full h-full bg-red-50 opacity-20 z-10"></div>
+            <img src="../bookstore/bg.jpg" alt="fond avec horloge et plante" class="w-full object-cover col-start-1 row-start-1 col-span-full h-full">
+            <h1 class="text-4xl font-bold col-span-full col-start-1 row-start-1 z-20 text-white">Shop</h1>
+        </section>
+
+        <!-- Section de recherche de livres -->
+         <section class="bg-white p-8">
+            <div class="container mx-auto px-8 grid grid-cols-8 justify-center gap-8 xl:gap-16 w-full">
+
+                <!-- Partie contenant les options de filtre -->
+                <div class="row-start-2 lg:row-start-1 sm:col-span-4 col-span-full lg:col-span-2 flex flex-col gap-8">
+                    <form action="#" class="flex w-full">
+                        <input type="text" class="w-full shadow-[inset_0_-1px_1px_-1px_rgba(0,0,0,0.25)] px-2 outline-0" placeholder="Search books..">
+                        <button><i class="fa-solid p-2 text-white bg-red-400 fa-magnifying-glass"></i></button>
+                    </form>
+
+                    <!-- Partie Catégories -->
+                    <div class="flex flex-col gap-4">
+                        <div>
+                            <h1 class="pb-4 font-bold text-2xl">Categories</h1>
+                            <hr class="w-16 text-red-500">
+                        </div>
+                        <div class="flex flex-col gap-2 justify-start items-start">
+                            <p>Business (3)</p>
+                            <p>Classic (7)</p>
+                            <p>Drama (2)</p>
+                            <p>For Kid (13)</p>
+                            <p>Horror (16)</p>
+                            <p>Love (1)</p>
+                        </div>
+                    </div>
+
+                    <!-- Partie Prix -->
+                    <div class="flex w-full flex-col gap-4">
+                        <div>
+                            <h1 class="pb-4 font-bold text-2xl">Price</h1>
+                            <hr class="w-16 text-red-500">
+                        </div>
+                        <form action="#" class="w-full flex flex-col">
+                            <input type="range" name="rangePrice" id="rangePrice" min="2400" max="23400" class="w-full">
+                            <div class="flex justify-between">
+                                <p>2400 FCFA</p>
+                                <p>23 400 FCFA</p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Partie Auteur -->
+                    <div class="flex flex-col gap-4">
+                        <div>
+                            <h1 class="pb-4 font-bold text-2xl">Author</h1>
+                            <hr class="w-16 text-red-500">
+                        </div>
+                        <form class="flex flex-col gap-2 justify-start items-start">
+                            <label for="" class="flex items-center gap-2"><input type="checkbox">Anna Hiltons (3)</label>
+                            <label for="" class="flex items-center gap-2"><input type="checkbox">Amanda Belle (4)</label>
+                            <label for="" class="flex items-center gap-2"><input type="checkbox">Coco Simon (2)</label>
+                            <label for="" class="flex items-center gap-2"><input type="checkbox">Nicolas Sumpir (3)</label>
+                            <label for="" class="flex items-center gap-2"><input type="checkbox">Sabela Hupter (7)</label>
+                            <label for="" class="flex items-center gap-2"><input type="checkbox">Susan Merrlin (4)</label>
+                        </form>
+                    </div>
+
+                    <!-- Partie Tags -->
+                    <div class="grid grid-cols-3 gap-4 justify-start items-start w-full">
+                        <div class="col-span-full">
+                            <h1 class="pb-4 font-bold text-2xl">Categories</h1>
+                            <hr class="w-16 text-red-500">
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="classicCheck" class="hidden peer">
+                            <label for="classicCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Classic</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="horrorCheck" class="hidden peer">
+                            <label for="horrorCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Horror</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="kidsCheck" class="hidden peer">
+                            <label for="kidsCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Kids</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="menCheck" class="hidden peer">
+                            <label for="menCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Men</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="trendCheck" class="hidden peer">
+                            <label for="trendCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Trend</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="womenCheck" class="hidden peer">
+                            <label for="womenCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Women</h3>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partie des livres -->
+                 <div class="row-start-1 col-span-full lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 border-b pb-12 border-gray-200">
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/liv1.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/liv2.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/liv3.webp" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/livre1.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/livre2.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/livre3.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/livre4.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/livre5.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/livre6.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/spec1.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/spec2.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+
+                    <div class="col-span-1 flex flex-col justify-start items-start gap-1">
+                        <img src="../bookstore/spec3.png" alt="This is how you heal" class="w-full sm:w-auto sm:h-72 object-cover">
+                        <h3 class="font-bold text-lg">The Book Mart</h3>
+                        <p class="text-gray-400 text-xs">classic Literature</p>
+                        <p class="text-red-400 font-bold">19 400 FCFA</p>
+                    </div>
+                 </div>
+
+                 <!-- Partie des défilement des pages -->
+                <div class="col-span-full flex gap-6 justify-center items-center">
+                    <div class="py-2 px-4 bg-red-400 text-white">1</div>
+                    <div class="py-2 px-4 transition-all duration-150 border hover:border-0 hover:bg-red-400 hover:text-white cursor-pointer">2</div>
+                    <div class="py-2 px-4 transition-all duration-150 border hover:border-0 hover:bg-red-400 hover:text-white cursor-pointer">3</div>
+                </div>
+            </div>
+         </section>
+    </main>
+
+    <!-- debut du footer -->
+    <footer class="w-full bottom-0 left-0 right-0 bg-white">
         <nav class="container w-full mx-auto p-8">
             <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-between gap-16">
                 <li class="h-full col-span-1">
