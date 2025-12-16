@@ -10,6 +10,8 @@
 </head>
 <body class="relative min-h-screen">
     <input type="checkbox" id="menuBurger" class="peer" hidden>
+
+    <!-- debut header -->
     <header class="fixed py-4 sm:h-32 shadow-[0_8px_30px_rgb(0,0,0,0.12)] z-50 bg-white w-full h-fit">
         <section class="container mx-auto px-4">
             <ul class="flex justify-between items-center">
@@ -41,6 +43,8 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Debut sidebar -->
     <nav class="bg-white fixed opacity-0 z-50 transition-all duration-100 peer-checked:opacity-100 pointer-events-none peer-checked:pointer-events-auto w-full h-fit mt-16 sm:hidden">
         <ul class="flex flex-col justify-center items-center gap-4">
             <li><a href="../index.html" class="hover:text-red-400 transition-all duration-100 hover:underline hover:underline-offset-1">Home</a></li>
@@ -49,8 +53,193 @@
             <li><a href="./contact.html" class="hover:text-red-400 transition-all duration-100 hover:underline hover:underline-offset-1">Contact</a></li>
         </ul>
     </nav>
-    <main></main>
-    <footer class="w-full absolute bottom-0 left-0 right-0 bg-white">
+
+    <!-- debut contenu principal de la page -->
+    <main>
+        <!-- Hero section -->
+        <section class="grid grid-cols-1 items-center justify-center text-center pt-16 sm:pt-28 min-h-62">
+            <div class="col-start-1 row-start-1 col-span-full h-full bg-red-50 opacity-20 z-10"></div>
+            <img src="../bookstore/bg.jpg" alt="fond avec horloge et plante" class="w-full object-cover col-start-1 row-start-1 col-span-full h-full">
+            <h1 class="text-4xl font-bold col-span-full col-start-1 row-start-1 z-20 text-white">Post</h1>
+        </section>
+
+        <!-- Section des posts -->
+         <section class="bg-white p-8">
+            <div class="container mx-auto lg:px-8 grid grid-cols-8 justify-center gap-8 w-full">
+
+                <!-- Partie contenant les options de filtre -->
+                <div class="md:row-start-1 md:col-span-3 col-span-full lg:col-span-3 flex flex-col gap-8 xl:gap-12">
+                    <form action="#" class="flex w-full">
+                        <input type="text" class="w-full shadow-[inset_0_-1px_1px_-1px_rgba(0,0,0,0.25)] px-2 outline-0" placeholder="Search books..">
+                        <button><i class="fa-solid p-2 text-white bg-red-400 fa-magnifying-glass"></i></button>
+                    </form>
+
+                    <!-- Partie Catégories -->
+                    <div class="flex flex-col gap-4">
+                        <div>
+                            <h1 class="pb-4 font-bold text-2xl">Categories</h1>
+                            <hr class="w-16 text-red-500">
+                        </div>
+                        <div class="flex flex-col gap-2 justify-start items-start">
+                            <p>Fashion (7)</p>
+                            <p>Life Style (7)</p>
+                            <p>Men (7)</p>
+                            <p>News (12)</p>
+                            <p>Travel (7)</p>
+                        </div>
+                    </div>
+
+                    <!-- Partie Posts -->
+                    <div class="flex w-full flex-col gap-4">
+                        <div>
+                            <h1 class="pb-4 font-bold text-2xl">Recent Post</h1>
+                            <hr class="w-16 text-red-500">
+                        </div>
+
+                        <div class="w-full flex flex-col gap-2 justify-center items-start">
+                            <div class="grid grid-cols-7 items-start justify-start gap-2 w-full">
+                                <img src="../bookstore/blog.jpg" alt="Image deux enveloppes ouvertes" class="col-span-2 h-full object-cover">
+                                <div class="col-span-5 flex flex-col items-start gap-0.5">
+                                    <h5 class="text-sm text-red-400">May 30, 2018 / Life Style</h5>
+                                    <span class="text-md font-bold">Book News Missed This Week</span>
+                                    <p class="text-sm italic">By Admin</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-7 items-start justify-start gap-2 w-full">
+                                <img src="../bookstore/blog2.jpg" alt="Image deux enveloppes ouvertes" class="col-span-2 h-full object-cover">
+                                <div class="col-span-5 flex flex-col items-start gap-0.5">
+                                    <h5 class="text-sm text-red-400">May 30, 2018 / Life Style</h5>
+                                    <span class="text-md font-bold">Book News Missed This Week</span>
+                                    <p class="text-sm italic">By Admin</p>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-7 items-start justify-start gap-2 w-full">
+                                <img src="../bookstore/blog3.jpg" alt="Image deux enveloppes ouvertes" class="col-span-2 h-full object-cover">
+                                <div class="col-span-5 flex flex-col items-start gap-0.5">
+                                    <h5 class="text-sm text-red-400">May 30, 2018 / Life Style</h5>
+                                    <span class="text-md font-bold">Book News Missed This Week</span>
+                                    <p class="text-sm italic">By Admin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partie Archives -->
+                    <div class="flex flex-col gap-4">
+                        <div>
+                            <h1 class="pb-4 font-bold text-2xl">Author</h1>
+                            <hr class="w-16 text-red-500">
+                        </div>
+                        <div class="w-full flex flex-col gap-4">
+                            <p>May 2018</p>
+                            <p>April 2017</p>
+                            <p>November 2016</p>
+                        </div>
+                    </div>
+
+                    <!-- Partie Tags -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 justify-start items-start w-full">
+                        <div class="col-span-full">
+                            <h1 class="pb-4 font-bold text-2xl">Tags</h1>
+                            <hr class="w-16 text-red-500">
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="classicCheck" class="hidden peer">
+                            <label for="classicCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Classic</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="horrorCheck" class="hidden peer">
+                            <label for="horrorCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Horror</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="kidsCheck" class="hidden peer">
+                            <label for="kidsCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Kids</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="menCheck" class="hidden peer">
+                            <label for="menCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Men</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="trendCheck" class="hidden peer">
+                            <label for="trendCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Trend</h3>
+                            </label>
+                        </div>
+
+                        <div class="flex flex-col w-full col-span-1 justify-start items-start">
+                            <input type="checkbox" id="womenCheck" class="hidden peer">
+                            <label for="womenCheck" class="peer-checked:border-red-400 peer-checked:bg-white peer-checked:text-red-400 group w-full border border-black hover:border-red-400 flex justify-center items-center gap-4 p-4 hover:bg-white hover:scale-101 transition-all duration-200">
+                                <h3 class="text-md 2xl:text-xl font-medium group-hover:text-red-400  transition-all duration-200">Women</h3>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Partie Offre Promotion -->
+                    <div class="flex flex-col gap-4">
+                        <img src="../bookstore/Image6.jpg" alt="Image de tablette avec une offre promotionelle de 50%" class="w-1/2 md:w-full lg:w-1/2 transition-all duration-300 hover:scale-110">
+                    </div>
+                </div>
+
+                <!-- Partie des Posts -->
+                 <div class="row-start-2 md:row-start-1 col-span-full h-fit sm:col-span-5 grid grid-cols-1 xl:grid-cols-5 lg:grid-cols-4 gap-4 lg:gap-12">
+                    <div class="col-span-full flex flex-col h-fit gap-3">
+                        <img src="../bookstore/post.jpg" alt="Image de Post de femme lisant" class="w-full object-cover">
+                        <h2 class="text-gray-400">Je pense donc je suis. Des mots simples mais remplis de sens. De mots issus d'une plume et d'un peu d'encre mais lourd de sens.</h2>
+                    </div>
+
+                    <div class="grid col-span-full h-fit grid-cols-3 gap-4">
+                        <img src="../bookstore/post.jpg" alt="Image de femme lisant" class="w-full object-cover col-span-1">
+                        <img src="../bookstore/post2.jpg" alt="Image de femme lisant" class="w-full object-cover col-span-1">
+                        <img src="../bookstore/post3.jpg" alt="Image de femme lisant" class="w-full object-cover col-span-1">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-0.5 col-span-full h-fit border-t py-8 border-b">
+                        <div class="flex col-span-full sm:col-span-1 flex-col w-full">
+                            <span class="text-red-400 cursor-pointer">Previous article</span>
+                            <span>Post format audio blogs</span>
+                        </div>
+                        <div class="flex col-span-full sm:col-span-1  text-end flex-col w-full">
+                            <span class="text-red-400 cursor-pointer">Next article</span>
+                            <span>Lorem ipsum dolor sit amet</span>
+                        </div>
+                    </div>
+
+                    <div class="col-span-full h-fit flex flex-col gap-4">
+                        <div class="w-full flex flex-col gap-1">
+                            <h2 class="font-bold text-4xl w-full">Leave a Reply</h2>
+                            <p class="w-full text-gray-700">Your email address will not be published.</p>
+                        </div>
+                        <form action="#" class="grid grid-cols-3 gap-3 col-span-full">
+                            <textarea name="comment" id="comment" placeholder="Comment" class="row-span-2 p-3 bg-gray-100 col-span-full outline-0" required></textarea>
+                            <input type="text" placeholder="Name" class="lg:row-start-3 bg-gray-100 col-span-full lg:col-span-1 p-3 outline-0" required>
+                            <input type="email" name="email" id="email" placeholder="Email" class="outline-0 lg:row-start-3 p-3 col-span-full lg:col-span-1 bg-gray-100" required>
+                            <input type="url" placeholder="Website" class="col-span-full lg:col-span-1 p-3 lg:row-start-3 bg-gray-100 outline-0" required>
+                            <button class="bg-red-400 cursor-pointer text-white w-32 py-3">Post comment</button>
+                        </form>
+                    </div>
+                 </div>                
+
+            </div>
+         </section>
+    </main>
+
+    <!-- Debut footer -->
+    <footer class="w-full bottom-0 left-0 right-0 bg-white">
         <nav class="container w-full mx-auto p-8">
             <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-between gap-16">
                 <li class="h-full col-span-1">
